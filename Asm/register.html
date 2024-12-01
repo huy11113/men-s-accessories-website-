@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="register.css">
+    
+</head>
+
+<body>
+    <div class="registration-form">
+        <h2>Register</h2>
+        <form action="/submit" method="POST">
+            <!-- Full Name -->
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your full name">
+
+            <!-- Phone Number -->
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" name="phone" required placeholder="Enter your phone number">
+
+            <!-- Email -->
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+            <!-- Password -->
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required placeholder="Create a password">
+
+            <!-- Confirm Password -->
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" name="confirm-password" required
+                placeholder="Confirm your password">
+
+            <!-- Gender -->
+            <label>Gender</label>
+            <div>
+                <input type="radio" id="male" name="gender" value="Male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label>
+            </div>
+
+            <!-- Birthdate -->
+            <!-- Birthdate -->
+            <label for="birthdate">Date of Birth</label>
+            <div class="birthdate">
+                <select id="day" name="day" required>
+                    <option value="" disabled selected>Day</option>
+                    <!-- Thêm ngày từ 1 đến 31 -->
+                    <script>
+                        for (let i = 1; i <= 31; i++) {
+                            document.write(`<option value="${i}">${i}</option>`);
+                        }
+                    </script>
+                </select>
+
+                <select id="month" name="month" required>
+                    <option value="" disabled selected>Month</option>
+                    <!-- Thêm tháng từ 1 đến 12 -->
+                    <script>
+                        for (let i = 1; i <= 12; i++) {
+                            document.write(`<option value="${i}">${i}</option>`);
+                        }
+                    </script>
+                </select>
+
+                <select id="year" name="year" required>
+                    <option value="" disabled selected>Year</option>
+                    <!-- Thêm năm từ 1900 đến 2024 -->
+                    <script>
+                        for (let i = 2024; i >= 1900; i--) {
+                            document.write(`<option value="${i}">${i}</option>`);
+                        }
+                    </script>
+                </select>
+            </div>
+
+
+            <!-- Register Button -->
+            <button type="submit">Register</button>
+        </form>
+
+        <!-- Login Link -->
+        <p class="login-link">Yes, I have an account? <a href="Login.HTML">Login</a></p>
+    </div>
+</body>
+<script src="register.js"></script>
+
+
+</html>

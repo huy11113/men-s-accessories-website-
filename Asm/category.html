@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Categories</title>
+  <link rel="stylesheet" href="category.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <div class="header-center">
+        <a href="Home.html"><img src="img/Silent-MonkeyAnimalLogoDesign.png" alt=""></a>
+      </div>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li class="nav-link"><a href="Home.html">Home</a></li>
+        <li class="nav-link services">
+          <a href="#">Categories
+            <span class="material-icons dropdown-icon">arrow_drop_down</span>
+          </a>
+          <ul class="drop-down">
+            <li>Hat</li>
+            <li>Glasses</li>
+            <li>Belt</li>
+            <li>Bag Wallet</li>
+          </ul>
+        </li>
+        <li class="nav-link"><a href="#">New Arrivals</a></li>
+        <li class="nav-link"><a href="Blog.html">Blog</a></li>
+      </ul>
+      <div class="header-right">
+        <img src="https://img.icons8.com/ios-filled/50/000000/search.png" alt="Search" class="icon">
+        <img src="https://img.icons8.com/ios-filled/50/000000/user.png" alt="User" class="icon">
+        <a href="cart.html" class="icon-link">
+          <img src="https://img.icons8.com/ios-filled/50/000000/shopping-cart.png" alt="Cart" class="icon">
+        </a>
+        <!-- Thông báo thêm thành công -->
+        <div id="notification" class="hidden">
+          <p>Sản phẩm đã được thêm vào giỏ hàng!</p>
+        </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="filter">
+      <h2>Filter Products</h2>
+      <div class="filter-options">
+        <button class="filter-btn" data-category="all">All</button>
+        <button class="filter-btn" data-category="hat">Hats</button>
+        <button class="filter-btn" data-category="bag Wallets">Bag Wallets</button>
+        <button class="filter-btn" data-category="glasses">Glasses</button>
+        <button class="filter-btn" data-category="Belt">Belts</button>
+      </div>
+      </div>
+      <div class="sort-container">
+        <label for="sort">Sort by price: </label>
+        <select id="sort" name="sort" onchange="sortProducts()">
+          <option value="asc">Price increases gradually</option>
+          <option value="desc">Price decreasing</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="products-section">
+      <div class="products">
+        <div class="product-item" data-id="1" data-category="Hat">
+          <img src="img/hat/245m3402999_1_3lrvkg6bdiih6twt.webp" alt="KARL LAGERFELD">
+          <h3>KARL LAGERFELD</h3>
+          <p class="price">1.954.150 VNĐ</p>
+          <button class="add-to-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+
+        <div class="product-item" data-id="2" data-category="Hat">
+          <img src="img/hat/245m3401999_1_uvapczly0ggcltqw.webp" alt="KARL LAGERFELD">
+          <h3>KARL LAGERFELD</h3>
+          <p class="price">1.954.150 VNĐ</p>
+          <button class="add-to-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+        <div class="product-item" data-id="4" data-category="Hat">
+          <img src="img/hat/6g6hsa00l_700_fs.webp" alt="SISLEY">
+          <h3>SISLEY</h3>
+          <p class="price">1.150.000 VNĐ</p>
+          <button class="add-to-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+
+        <div class="product-item" data-id="5" data-category="Hat">
+          <img src="img/hat/hx0342-pff-2.webp" alt="CK ACCESSORIES">
+          <h3>CK ACCESSORIES</h3>
+          <p class="price">1.799.000 VNĐ</p>
+          <button class="add-to-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+
+        <div class="product-item" data-id="6" data-category="Hat">
+          <img src="img/hat/lifestyle_710950650001_pyimtlkttiwqzoos.webp" alt="POLO RALPH LAUREN">
+          <h3>POLO RALPH LAUREN</h3>
+          <p class="price">2.799.000 VNĐ</p>
+          <button class="add-to-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+
+
+        <div class="product-item" data-id="8" data-category="glasses">
+          <img src="img/glasses/60324rp-3-1.webp" alt="CK ACCESSORIES">
+          <h3>CK ACCESSORIES</h3>
+          <p class="price">1.799.000 VNĐ</p>
+          <button class="add-to-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+
+        <div class="product-item" data-id="9" data-category="glasses">
+          <img src="img/glasses/mk.webp" alt="POLO RALPH LAUREN">
+          <h3>POLO RALPH LAUREN</h3>
+          <p class="price">2.799.000 VNĐ</p>
+          <button class="add-to-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+
+        <div class="product-item" data-id="10" data-category="glasses">
+          <img src="img/glasses/sun2095t-2s-2-one_size.webp" alt="CK ACCESSORIES">
+          <h3>CK ACCESSORIES</h3>
+          <p class="price">1.799.000 VNĐ</p>
+          <button class="add-to-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+
+        <div class="product-item" data-id="11" data-category="glasses">
+          <img src="img/glasses/sun8007j-2s-2-one_size_1.webp" alt="POLO RALPH LAUREN">
+          <h3>POLO RALPH LAUREN</h3>
+          <p class="price">2.799.000 VNĐ</p>
+          <button class="add-to-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+        <!-- Belt -->
+        <div class="product-item" data-id="12" data-category="Belt">
+          <img src="img/Belt/37456-0043-details1_1_1.webp" alt="LEVI'S">
+          <h3>LEVI'S</h3>
+          <p class="price">1.100.000 VNĐ</p>
+          <button class="add-to-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+        <div class="product-item" data-id="13" data-category="Belt">
+          <img src="img/Belt/hc0769030-4_kfvmr7yxpvc1x76z.webp" alt="CK ACCESSORIES">
+          <h3>CK ACCESSORIES</h3>
+          <p class="price">1.949.500 VNĐ</p>
+          <button class="add-to-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+        <div class="product-item" data-id="14" data-category="Belt">
+          <img src="img/Belt/cn52649707_1.webp" alt="BANANA REPUBLIC">
+          <h3>BANANA REPUBLIC</h3>
+          <p class="price">1.950.000 VNĐ</p>
+          <button class="add-to-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+        <div class="product-item" data-id="15" data-category="Belt">
+          <img src="img/Belt//guide_1__0000_951418_4f899_00954_e.webp.webp" alt="ARMANI EXCHANGE">
+          <h3>ARMANI EXCHANGE</h3>
+          <p class="price">3.119.000 VNĐ</p>
+          <button class="add-to-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+        <div class="product-item" data-id="16" data-category="Belt">
+          <img src="img/Belt/thumb_0000_layer_6_2.webp" alt="POLO RALPH LAUREN">
+          <h3>POLO RALPH LAUREN</h3>
+          <p class="price">1.949.500 VNĐ</p>
+          <button class="add-to-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+        <!-- Bag Wallet -->
+        <div class="product-item" data-id="18" data-category="Bag Wallets">
+          <img src="img/Bag Wallet/am0am11794dw6_fl-f1.webp_2.webp" alt="TOMMY HILFIGER">
+          <h3>TOMMY HILFIGER</h3>
+          <p class="price">2.499.000 VNĐ</p>
+          <button class="add-to-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+        <div class="product-item" data-id="17" data-category="Bag Wallets">
+          <img src="img/Bag Wallet/am0am08645-c87-1_1.webp" alt="TOMMY JEANS">
+          <h3>TOMMY JEANS</h3>
+          <p class="price">1.329.300 VNĐ</p>
+          <button class="add-to-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+
+        <div class="product-item" data-id="19" data-category="Bag Wallets">
+          <img src="img/Bag Wallet/guide_0016_240m3256999_1.webp_1.webp" alt="KARL LAGERFELD">
+          <h3>KARL LAGERFELD</h3>
+          <p class="price">1.799.000 VNĐ</p>
+          <button class="add-to-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+        <div class="product-item" data-id="20" data-category="Bag Wallets">
+          <img src="img/Bag Wallet/lifestyle_405803865002.webp" alt="POLO RALPH LAUREN">
+          <h3>POLO RALPH LAUREN</h3>
+          <p class="price">3.119.000 VNĐ</p>
+          <button class="add-to-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+        <div class="product-item" data-id="21" data-category="Bag Wallets">
+          <img src="img/Bag Wallet/lifestyle_405945885001_hnxasurh08brgdn0.webp" alt="POLO RALPH LAUREN">
+          <h3>POLO RALPH LAUREN</h3>
+          <p class="price">6.019.300 VNĐ</p>
+          <button class="add-to-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+      </div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+        <!-- Contact Information -->
+        <div class="footer-section contact">
+            <h3>Contact Us</h3>
+            <p><i class="fa-solid fa-location-dot"></i> Nguyễn Cơ Thạch, Mỹ Đình,Nam Tử Liêm ,Hà Nội</p>
+            <p><i class="fa-solid fa-phone"></i> (+84) 34-677-6711</p>
+            <p><i class="fa-solid fa-envelope"></i> support@silentmonkey.com</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="category.html">Categories</a></li>
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="#">Brands</a></li>
+                <li><a href="#">Outlet Sale</a></li>
+            </ul>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="footer-section social">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright Section -->
+    <div class="footer-bottom">
+        <p>&copy; 2024 Silent Monkey. All Rights Reserved.</p>
+    </div>
+</footer>
+  <script src="Category.js"></script>
+
+
+</body>
+
+</html>
